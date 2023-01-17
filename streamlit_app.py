@@ -74,9 +74,9 @@ if streamlit.button('Get Fruit Load list'):
   streamlit.dataframe(my_data_rows)
 
 # Add fruit to Snowflake
+new_fruit = streamlit.text_input('What fruit would you like to add?')
 if streamlit.button('Add a fruit to the list'):
   try:
-    new_fruit = streamlit.text_input('What fruit would you like to add?')
     if not fruit_choice:
       streamlit.error("Please input a fruit to add")
     else:
