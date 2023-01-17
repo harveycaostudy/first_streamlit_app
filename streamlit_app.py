@@ -81,6 +81,6 @@ if streamlit.button('Add a fruit to the list'):
     if not new_fruit:
       streamlit.error("Please input a fruit to add")
     else:
-      insert_row_snowflake(new_fruit)
+      streamlit.text(insert_row_snowflake(new_fruit))
   except URLError as e:
     streamlit.error()
